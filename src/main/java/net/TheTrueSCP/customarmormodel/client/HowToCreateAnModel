@@ -1,0 +1,14 @@
+1 Install Blockbench
+2 Open Blockbench
+3 Create Minecraft Skin (uncheck pose)
+3 Convert to Modded Entity (File -> Convert Project -> Modded Entity)
+4 Model you custom armor
+5 Delete all parts exept for your armor(basically your armor is an "shell")
+6 Export Modded Entity(File -> Export -> Export Modded Entity)
+7 Rename the class and extend it like the example
+8 Add under the method setupAnim() these lines:
+        this.[RightArm.xRot] = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+        this.[LeftLeg.xRot] = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+        this.[LeftArm.xRot] = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
+        this.[RightLeg.yRot] = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+9 Register the layer in the ClientEventBusSubscriber
