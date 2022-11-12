@@ -20,6 +20,7 @@ import org.lwjgl.glfw.GLFW;
 public class ClientEventBusSubscriber
 {
 
+
  @Mod.EventBusSubscriber(modid = CustomArmorModelMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public class ModEvents
     {
@@ -30,7 +31,7 @@ public class ClientEventBusSubscriber
         {
 
 
-            //Here, we register the modellayer
+            //Here, we register the model-layer, thats VERY imported because minecraft needs to know how it schould render the model
             event.registerLayerDefinition(CustomArmorModel.LAYER_LOCATION, CustomArmorModel::createBodyLayer);
         }
 

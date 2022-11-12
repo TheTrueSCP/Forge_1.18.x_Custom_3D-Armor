@@ -11,9 +11,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 
+//This is the exported bb file
+//IMPORTANT: LOOK at the HowToCreateAnModel.txt file which is in the same direction as this file
 public class CustomArmorModel  <T extends Entity> extends EntityModel<T>
 
-{  public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "custom_model"), "main");
+{  public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("customarmormodel", "custom_model"), "main");
     public final ModelPart Head;
     public final ModelPart Body;
     public final ModelPart RightArm;

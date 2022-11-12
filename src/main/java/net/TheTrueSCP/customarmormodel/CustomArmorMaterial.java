@@ -14,11 +14,13 @@ import java.util.function.Supplier;
 public enum CustomArmorMaterial implements ArmorMaterial
 {
 
-    //This is our custom material for our armor
+    //This is the custom material for our armor, look at the constructor to see what the values mean
     CUSTOM_ARMOR_MATERIAL("custom_armor_material", 33, new int[]{3, 6, 8, 3}, 0, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
         return Ingredient.of(Items.IRON_INGOT);
     });
 
+
+    // Copy and paste the following stuff (its from vanilla)
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
     private final int durabilityMultiplier;
